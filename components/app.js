@@ -4,6 +4,12 @@ class App {
   };
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
+    var sum = 0;
+    for (var i = 0; i < grades.length; i++) {
+      sum += grades[i]["grade"];
+    };
+    var average = sum / i;
+    this.pageHeader.updateAverage(average);
   };
   constructor(gradeTable, pageHeader) {
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
