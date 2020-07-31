@@ -4,11 +4,18 @@ class App {
   };
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
+    var sum = 0;
+    for (var i = 0; i < grades.length; i++) {
+      sum += grades[i]["grade"];
+    };
+    var average = sum / i;
+    this.pageHeader.updateAverage(average);
   };
-  constructor(gradeTable) {
+  constructor(gradeTable, pageHeader) {
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
     this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
     this.gradeTable = gradeTable;
+    this.pageHeader = pageHeader;
   };
   getGrades() {
     $.ajax({
