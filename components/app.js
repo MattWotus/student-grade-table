@@ -97,11 +97,11 @@ class App {
         "X-Access-Token": "h3ULKq3b"
       },
       data: {
-        nameUpdated: nameUpdated,
-        courseUpdated: courseUpdated,
-        gradeUpdated: gradeUpdated
+        name: nameUpdated,
+        course: courseUpdated,
+        grade: gradeUpdated
       },
-      url: "https://sgt.lfzprototypes.com/api/grades" + id,
+      url: "https://sgt.lfzprototypes.com/api/grades/" + id,
       method: "PATCH",
       success: this.handleGradeUpdateSuccess,
       error: this.handleGradeUpdateError

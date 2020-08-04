@@ -25,13 +25,15 @@ class GradeForm {
     this.formElement[0].value = data.name;
     this.formElement[1].value = data.course;
     this.formElement[2].value = data.grade;
+    this.formElement.id = data.id;
+    console.log(this.formElement.id);
   };
   updateSubmit(event) {
     var formDataUpdated = new FormData(event.target);
     var nameUpdated = formDataUpdated.get("name");
     var courseUpdated = formDataUpdated.get("course");
     var gradeUpdated = formDataUpdated.get("grade");
-    this.gradeUpdate(nameUpdated, courseUpdated, gradeUpdated);
+    this.gradeUpdate(nameUpdated, courseUpdated, gradeUpdated, this.formElement.id);
     var addButton = document.getElementById("addButton");
     var updateFormButton = document.getElementById("updateFormButton");
     addButton.classList.remove("d-none");
