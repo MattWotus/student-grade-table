@@ -31,12 +31,6 @@ class GradeTable {
     var tableDataCourse = document.createElement("td");
     var tableDataGrade = document.createElement("td");
     var tableDataButtons = document.createElement("td");
-    var updateButton = document.createElement("button");
-    updateButton.classList.add("btn");
-    updateButton.classList.add("btn-info");
-    updateButton.textContent = "Update";
-    updateButton.style.padding = "6px 20px 6px 20px";
-    updateButton.style.margin = "0 15px 0 0";
     var deleteButton = document.createElement("button");
     deleteButton.classList.add("btn");
     deleteButton.classList.add("btn-danger");
@@ -46,7 +40,6 @@ class GradeTable {
     tableRow.appendChild(tableDataName);
     tableRow.appendChild(tableDataCourse);
     tableRow.appendChild(tableDataGrade);
-    tableDataButtons.appendChild(updateButton);
     tableDataButtons.appendChild(deleteButton);
     tableRow.appendChild(tableDataButtons);
     tableBody.appendChild(tableRow);
@@ -55,13 +48,6 @@ class GradeTable {
     tableDataGrade.textContent = data.grade;
     deleteButton.addEventListener("click", function () {
       deleteGrade(data.id);
-    });
-    updateButton.addEventListener("click", function () {
-      setUpdating(data);
-      var addButton = document.getElementById("addButton");
-      var updateFormButton = document.getElementById("updateFormButton");
-      addButton.classList.add("d-none");
-      updateFormButton.classList.remove("d-none");
     });
     return tableRow;
   };
