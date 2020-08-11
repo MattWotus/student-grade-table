@@ -24,7 +24,7 @@ Try the application live at https://mattwotus.github.io/student-grade-table/
 
 ## Preview
 
-![SGT React](student-grade-table.gif)
+![Student_Grade_Table](assets/student-grade-table.gif)
 
 ## Development
 
