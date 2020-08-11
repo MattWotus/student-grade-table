@@ -31,8 +31,10 @@ Try the application live at https://mattwotus.github.io/student-grade-table/
 ### Getting Started
 
 1. Clone the repository.
+
    ```
    git clone https://github.com/MattWotus/student-grade-table.git
    ```
+   
 2. Open the folder in a code editor and open the index.html in default browser.    
 
