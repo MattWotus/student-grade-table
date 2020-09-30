@@ -13,7 +13,7 @@ A JavaScript application for teachers who want to manage course records.
 
 ## Live Demo
 
-Try the application live at https://mattwotus.github.io/student-grade-table/
+Try the application live at http://grade-table.mattwotusdev.com/
 
 ## Features
 
